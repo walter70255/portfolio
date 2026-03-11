@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 export function ProjectsSection() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
@@ -137,7 +138,7 @@ export function ProjectsSection() {
                         <>
                           {project.image ? (
                             <Image
-                              src={project.image}
+                              src={getAssetPath(project.image)}
                               alt={`${project.title} Preview`}
                               fill
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
