@@ -1,18 +1,18 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === 'production';
+// Only apply basePath on GitHub Actions
 const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
-const basePath = isGitHubPages ? '/portfolio' : '';
 
 const nextConfig: NextConfig = {
-  output: isGitHubPages ? 'export' : undefined,
-  basePath: basePath,
-  assetPrefix: isGitHubPages ? '/portfolio/' : undefined,
+  output: 'export',
+  basePath: isGitHubPages ? '/portfolio' : '',
   trailingSlash: true,
   images: {
     unoptimized: true,
   },
   env: {
-    NEXT_PUBLIC_BASE_PATH: basePath,
+    NEXT_PUBLIC_BASE_PATH: isGitHubPages ? '/portfolio' : '',
   },
 };
 

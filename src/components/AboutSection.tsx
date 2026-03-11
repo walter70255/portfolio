@@ -1,6 +1,6 @@
 import { Section } from "./Section";
 import Image from "next/image";
-import { getAssetPath } from "@/lib/utils";
+// import { getAssetPath } from "@/lib/utils"; // Removed to rely on Next.js basePath
 
 export function AboutSection() {
   return (
@@ -40,7 +40,7 @@ export function AboutSection() {
           <div className="aspect-square max-w-md mx-auto relative rounded-3xl overflow-hidden bg-muted/20 border border-border/50 group">
             {/* Developer Profile Photo */}
             <Image
-              src={getAssetPath("/shamvil_enhanced_1773252661729.png")}
+              src="/shamvil_enhanced_1773252661729.png"
               alt="Shamvil Shahin M - Full Stack Flutter Developer"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-110"

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { FaWhatsapp } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { getAssetPath } from "@/lib/utils";
+// import { getAssetPath } from "@/lib/utils"; // Removed to rely on Next.js basePath
 
 export function ProjectsSection() {
   const [playingVideo, setPlayingVideo] = useState<string | null>(null);
@@ -138,7 +138,7 @@ export function ProjectsSection() {
                         <>
                           {project.image ? (
                             <Image
-                              src={getAssetPath(project.image)}
+                              src={project.image}
                               alt={`${project.title} Preview`}
                               fill
                               className="object-cover transition-transform duration-700 group-hover:scale-105"
