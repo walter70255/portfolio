@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <Link href="/" className="text-2xl font-bold tracking-tighter">
-              Shamvil<span className="text-primary">.dev</span>
+              SHAMVIL <span className="text-primary">SHAHIN</span>
             </Link>
             <p className="mt-2 text-muted-foreground max-w-sm">
               Full Stack Flutter Developer specializing in multi-vendor marketplaces, real-time service platforms, and messaging solutions.
