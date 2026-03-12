@@ -55,7 +55,6 @@ export function Navbar() {
 
           {/* Desktop Social/Contact */}
           <div className="hidden md:flex items-center space-x-4">
-
             <Link
               href="https://www.linkedin.com/in/shamvildev/"
               target="_blank"
@@ -106,8 +105,7 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <div className="flex space-x-6 py-4">
-
+          <div className="flex items-center space-x-6 py-4">
             <Link href="https://www.linkedin.com/in/shamvildev/" target="_blank">
               <Linkedin className="w-6 h-6 text-foreground/80 hover:text-primary" />
             </Link>

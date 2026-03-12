@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { SiApple, SiAndroid, SiFlutter } from "react-icons/si";
-import { ArrowRight, Mail } from "lucide-react";
+import { ArrowRight, Mail, Download } from "lucide-react";
 import Typewriter from "typewriter-effect";
 
 const FloatingIcon = ({ icon: Icon, color, bgColor, delay, initialX, initialY, duration = 3 }: { icon: any, color: string, bgColor: string, delay: number, initialX: string, initialY: string, duration?: number }) => (
@@ -127,15 +127,23 @@ export function HeroSection() {
           </a>
 
           <a
+            href="/ShamvilResume.pdf"
+            download
+            className="inline-flex items-center justify-center h-14 w-full sm:w-52 rounded-full border border-primary/30 bg-primary/20 text-white font-semibold hover:bg-primary/30 transition-all hover:scale-[1.02] active:scale-95 group backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.1)]"
+          >
+            <Download className="mr-2 h-4 w-4 transition-transform group-hover:-translate-y-1" />
+            Resume
+          </a>
+
+          <a
             href="mailto:shamvil.dev@gmail.com"
-            className="inline-flex items-center justify-center h-14 w-full sm:w-56 rounded-full bg-white/5 text-foreground font-semibold border border-white/10 hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95"
+            className="inline-flex items-center justify-center h-14 w-full sm:w-48 rounded-full bg-white/5 text-foreground font-semibold border border-white/10 hover:bg-white/10 transition-all hover:scale-[1.02] active:scale-95"
           >
             <Mail className="mr-2 h-4 w-4" />
             Contact Me
           </a>
         </motion.div>
       </div>
-
 
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center opacity-30">
         <div className="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent" />
