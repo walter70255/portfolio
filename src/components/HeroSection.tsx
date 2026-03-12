@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { SiApple, SiAndroid, SiFlutter } from "react-icons/si";
 import { ArrowRight, Mail, Download } from "lucide-react";
 import Typewriter from "typewriter-effect";
+import { getAssetPath } from "@/lib/utils";
 
 const FloatingIcon = ({ icon: Icon, color, bgColor, delay, initialX, initialY, duration = 3 }: { icon: any, color: string, bgColor: string, delay: number, initialX: string, initialY: string, duration?: number }) => (
   <motion.div
@@ -127,7 +128,7 @@ export function HeroSection() {
           </a>
 
           <a
-            href="/ShamvilResume.pdf"
+            href={getAssetPath("/ShamvilResume.pdf")}
             download
             className="inline-flex items-center justify-center h-14 w-full sm:w-52 rounded-full border border-primary/30 bg-primary/20 text-white font-semibold hover:bg-primary/30 transition-all hover:scale-[1.02] active:scale-95 group backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.1)]"
           >
