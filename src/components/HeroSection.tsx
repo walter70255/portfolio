@@ -27,8 +27,8 @@ export function HeroSection() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-9xl font-bold tracking-tight mb-6 md:mb-8 leading-[0.85]"
         >
-          Crafting Digital <br />
-          <span className="text-primary italic">Masterpieces</span>
+          Turn Your Ideas <br />
+          Into <span className="text-primary italic">Apps</span>
         </motion.h1>
 
         <motion.div
